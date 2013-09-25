@@ -1,0 +1,39 @@
+/**
+ * Copyright: 2013 Josh Stagg
+ * Project: python_copper
+ */
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+// UI-Bootstrap fix
+.nav, .pagination, .carousel a { cursor: pointer; }
+
+#content {
+    min-height: 400px;
+}
+
+#main {
+    overflow-y: scroll;
+    height:  720px;
+}
+
+#sidebar {
+    background-color: @gray-lighter;
+}
+
+#slideDeck {
+// -webkit-transform: translate(-12%, -15%) scale(0.7,0.7);
+}
+
+
+// Redundent but best to make sure it stays hidden
+#scripts {
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+}
+
+div[id^='page_'] {
+    margin: 10px 0px !important;
+    border: 1px #000 solid !important;
+}

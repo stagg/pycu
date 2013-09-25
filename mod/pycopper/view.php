@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -16,13 +15,23 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Page module admin settings and defaults
- *
- * @package    mod
- * @subpackage page
- * @copyright  2009 Petr Skoda (http://skodak.org)
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package
+ * @subpackage
+ * @author joshstagg
+ * @copyright Josh Stagg
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
+require('../../config.php');
 
+require_login();
+
+if (isset($_POST['id'])) {       // POST has precedence
+    $param = $_POST['id'];
+} else if (isset($_GET['id'])) {
+    $param = $_GET['id'];
+} else {
+    print_error('missingparam', '', '', 'id');
+}
+
+redirect(new moodle_url("/mod/pycopper/#/slide/$param"));

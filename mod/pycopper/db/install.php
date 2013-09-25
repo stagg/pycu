@@ -16,7 +16,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Page module admin settings and defaults
+ * Page module post install function
+ *
+ * This file replaces:
+ *  - STATEMENTS section in db/install.xml
+ *  - lib.php/modulename_install() post installation hook
+ *  - partially defaults.php
  *
  * @package    mod
  * @subpackage page
@@ -26,3 +31,7 @@
 
 defined('MOODLE_INTERNAL') || die;
 
+function xmldb_pycopper_install() {
+    global $CFG;
+
+}
