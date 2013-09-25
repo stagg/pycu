@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="pycu">
+    <head>
+    <title>PYCU</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div  id="content" class="container">
+             <div class="row">
+                <div id="header" class="col-md-12" ui-view="navbar">
+                </div>
+            </div>
+            <div class="row">
+                <div id="main" class="col-md-9" ui-view="main"></div>
+                <div id="sidebar" class="col-md-3" ui-view="sidebar"></div>
+            </div>
+        </div>
+        <div id="scripts">
+            <!-- Libraries -->
+            <script type="text/javascript" src="js/lib/angular.min.js"></script>
+            <script type="text/javascript" src="js/lib/angular-ui-router.min.js"></script>
+            <script type="text/javascript" src="js/lib/ui-bootstrap-0.6.0.min.js"></script>
+            <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+            <script type="text/javascript" src="js/lib/restangular.min.js"></script>
+            <script type="text/javascript" src="js/lib/jquery-1.10.2.min.js"></script>
+            <!-- Models -->
+
+            <!-- Views -->
+
+             <!-- Core -->
+            <script type="text/javascript" src="js/main.js"></script>
+            <!-- Controllers -->
+            <script type="text/javascript" src="js/controllers/controllers.js"></script>
+        </div>
+        </body>
+</html>
